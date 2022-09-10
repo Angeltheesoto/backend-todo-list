@@ -7,7 +7,7 @@ require('dotenv').config()
 
 // homepage route
 app.get('/', (req, res) => {
-       res.send( 'welcom to our todoliste app')
+       res.send( 'welcom  our todoliste app')
 
    
     
