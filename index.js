@@ -1,7 +1,6 @@
-
-
+//dependencies
 const express = require('express');
-//initialize the app object
+//configuration
 const app = express();
 // get the environment variable
 require('dotenv').config()
@@ -13,6 +12,9 @@ app.get('/', (req, res) => {
    
     
 })
+//routes
+const todolisteController = require('./controller/todoController');
+app.use('/todoliste',todolisteController )
 //wild card route
 app.get('*', (req, res) => {
    res.status(404).send(`<div style='
