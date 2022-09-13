@@ -1,19 +1,20 @@
-//require needed modules
+//dependencies
 
 const express = require('express');
-//initialize the app object
 const app = express();
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const todoController = require('./controller/todoController')
+//require mongoose
 const mongoose = require('mongoose')
 // get the environment variable
 require('dotenv').config()
-//import the controller
+
 app.use(cors())
 app.use(bodyParser.json())
-
+//import the controller
 app.use('/todo', todoController)
+//connect to mango db
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
@@ -43,7 +44,6 @@ app.get('*', (req, res) => {
                  <h1>404</h1>
                  <h2>Page Not Found</h2>
                  <h3>this page doesn't exist </h3>
-                 <button style='hover: {background-color:green}; padding: 1em; background-color: white; border-radius: 10px;'> ${'http://localhost:3000/cookies'}  </button>
                </div>
                
              </div>

@@ -1,5 +1,11 @@
+//require mongoose
 const mongoose = require('mongoose')
+//todoliste schema
 const TodoSchema = new  mongoose.Schema({
+    name: {
+        type: String,
+        require: true 
+    },
     title:{
         type: String,
         required:true
