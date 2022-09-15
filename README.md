@@ -1,1 +1,1 @@
-# backend-todo-list
+# The application should have a Readme.md file in the GitHub repository that describes the inspiration for the application, how to use the application, lists the technologies used to build the application, and addresses any outstanding bugs or unfinished functionality
