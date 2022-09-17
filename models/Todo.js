@@ -2,16 +2,16 @@
 const mongoose = require('mongoose')
 //todoliste schema
 const TodoSchema = new  mongoose.Schema({
-    name: {
-        type: String,
-        require: true 
-    },
     title:{
         type: String,
         required:true
     },
     description:{
         type: String
+    },
+    createdOn: {
+        type: Date,
+        required: true
     },
     done:{
         type: Boolean,

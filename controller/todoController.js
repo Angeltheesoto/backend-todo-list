@@ -16,6 +16,7 @@ router.post('/', (req, resp)=>{
     const todo = new Todo({
         title: req.body.title,
         description: req.body.description,
+        createdOn: req.body.createdOn,
         done: false
     })
     todo.save().then(data => {
@@ -29,6 +30,7 @@ router.patch('/:id', (req, res) => {
         $set: {
             title: req.body.title,
             description: req.body.description,
+            createdOn: req.body.createdOn,
             done: req.body.done
         }
     }).then(data => {
