@@ -18,7 +18,7 @@
 *to run this server clone it into your local directory*
 *create a .env file containe these two parameters*
 1. `PORT=5000`(default)
-2. `MONGO_URI=mongodb://localhost:27017/todos` (url fot database)
+2. `MONGO_URI=mongodb+srv://noteproject:noteproject123@cluster0.cbcus0w.mongodb.net/?retryWrites=true&w=majority` (url fot database)
 *then run the node packages listed above from 2 to 5 *
 *then run `nodemon`* (if nodemon its not working the run the following command)
 1. `npm install nodemon`
